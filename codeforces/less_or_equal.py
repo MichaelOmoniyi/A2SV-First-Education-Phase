@@ -10,9 +10,15 @@ if k == 0:
     else:
         print(arr[0] - 1)
 elif k == n: # Exactly k elements must be less than or equal to x which is the max number
-    print(arr[-1] + 1)
+    if arr[-1] > 10**9:
+        print(-1)
+    else:
+        print(arr[-1])
 else:
     if arr[k - 1] == arr[k]:
         print(-1)
     else:
-        print(arr[k - 1] + 1)
+        if arr[k - 1] > 10**9:
+            print(-1)
+        else:
+            print(arr[k - 1])
